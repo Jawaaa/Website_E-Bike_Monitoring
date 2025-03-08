@@ -1,0 +1,24 @@
+{
+  "_axios-B4uVmeYG.js": {
+    "file": "assets/axios-B4uVmeYG.js",
+    "name": "axios"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-nOliJJ0A.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-B4uVmeYG.js"
+    ]
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-nOliJJ0A.js",
+    "name": "bootstrap",
+    "src": "resources/js/bootstrap.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-B4uVmeYG.js"
+    ]
+  }
+}

@@ -1,0 +1,652 @@
+:root {
+    --primary: #fff;
+    --bg: #0c0e4f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary);
+    color: #ffffff;
+    /* min-height: 147vh; */
+}
+
+.slider-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    padding: 20px;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px; 
+    background-color: var(--bg);
+    color: #ffffff;
+    padding-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+}
+
+.sidebar .sidebar-logo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sidebar .sidebar-logo img {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.sidebar-menu {
+    flex-grow: 1; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px; 
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #5256b9;
+    color: #fff;
+}
+
+.sidebar-extra {
+    margin-top: auto; 
+    text-align: center; 
+    display: none;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* CONTENT SEARCH*/
+
+.new-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-top: -20px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+}
+
+.main-content2 {
+    margin-right: 180px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card2 {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+}
+
+.card2 h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.card2 h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: normal;
+}
+
+.card3 {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+}
+
+.card3 h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.card3 h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: normal;
+}
+
+.card2, .card3{
+    width: 100%;
+}
+
+.card2{
+    min-width: 150px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--bg);
+    font-weight: bold;
+}
+
+#date-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#boxID {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+#boxID h2 {
+    color: var(--bg); 
+    font-size: 18px;
+}
+
+.motor-id {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+    border-bottom: 1px solid #0c0e4f;
+}
+
+.motor-id:hover {
+    background-color: #f0f0f0;
+}
+
+.battery-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    border-radius: 8px;
+    color: #fff;
+    padding: 15px;
+}
+
+.battery-title {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.battery-display {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    width: 100%; 
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.battery-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: -100px;
+}
+
+.battery-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.battery-stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.battery-percentage {
+    font-weight: bold;
+    font-size: 3em;
+    margin-right: 5px;
+}
+
+.battery-kilometers {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-top: 25px;
+    margin-left: 70px;
+}
+
+.battery-container {
+    position: relative;
+    width: 50px; 
+    height: 100px; 
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    padding: 3px; 
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.battery-head {
+    position: absolute;
+    top: -5px; 
+    left: 15px; 
+    width: 20px; 
+    height: 10px; 
+    background-color: #3d3d3d;
+    border-radius: 5px; 
+}
+
+.battery-body {
+    width: 100%;
+    height: 100%;
+    background-color: #555; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.battery-indicator {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    border-radius: 8px; 
+}
+
+.card2.speedometer {
+    /* Card styling */
+    background: var(--bg); 
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card2.wheel-lock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    border-radius: 8px;
+    color: #fff;
+    padding: 20px;
+
+}
+.lock-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lock-button.on {
+    background-color: green;
+    color: white;
+}
+
+.lock-button.off {
+    background-color: #555;
+    color: white;
+}
+
+.lock-icon {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 15px;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.lock-icon i {
+    position: absolute;
+}
+
+/* Map & Track Styles */
+.map-track-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1270px;
+    margin-right: 185px;
+    justify-content: space-between;
+}
+
+.map-container2 {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+#myMap2 {
+    width: 100%;
+    height: 440px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 2px;
+    justify-content: center;
+}
+
+.control-buttons button {
+    border-radius: 8px;
+    padding: 8px 16px;
+
+}
+
+.btn-success {
+    background-color: #fff; 
+    color: #000; 
+}
+
+.btn-danger {
+    background-color: #dc3545; 
+    color: #000; 
+}
+
+.btn-warning {
+    background-color: #ffc107; 
+    color: #000; 
+}
+
+.btn-success:hover {
+    background-color: #a2a2a2; 
+}
+
+.btn-danger:hover {
+    background-color: #c82333; 
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Custom Swiper styling */
+.swiper-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+@media (max-width: 1600px){
+    .card2{
+        width: 303px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .sidebar {
+        width: 65px;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .sidebar-open .sidebar {
+        width: 200px;
+    }
+
+    .sidebar > * {
+        display: none;
+    }
+
+    .sidebar-open .sidebar > * {
+        display: block;
+    }
+
+    body.sidebar-open::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        background-color: var(--bg);
+        z-index: 1001;
+    }
+
+    .new-flex-container {
+        padding-left: 135px;
+    }
+    
+    .battery-info {
+        margin-bottom: 10px;
+        justify-content: center;
+        flex-grow: 1;
+        padding-left: 5px;
+        margin-bottom: 30px;
+    }
+
+    .battery-kilometers {
+        text-align: center;
+        font-size: 2em;
+        margin-left: 90px;
+        margin-top: 10px;
+    }
+
+    .battery-stats {
+        align-items: center;
+        gap: 5px; 
+        justify-content: center;
+    }
+
+    .battery-percentage {
+        font-size: 2em; 
+        margin-left: 5px; 
+    }
+
+    .battery-status {
+        padding: 10px;
+    }
+
+    .battery-display {
+        margin-left: 30px;
+    }
+
+    .battery-content {
+        margin-top: -60px;
+    }
+
+    .battery-container {
+        width: 50px;
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .battery-head {
+        left: 15px;
+        width: 20px;
+        height: 10px;
+    }
+
+    .card2 {
+        width: 320px;
+    }
+    
+    .card3 {
+        width: 1340px;
+    }
+}
+
+@media (max-width: 1414px){
+    .card2{
+        width: 300px;
+    }
+    .card3{
+        width: 1260px;
+    }
+}
+
+@media (max-width: 1311px){
+    .main-content2 {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 2px;
+        padding-right: 1px;
+    }
+    .card2, .card3{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px){
+    .main-content2 {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px){
+    .main-content2 {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .battery-container {
+        width: 50px;
+        height: 100px;
+        margin-left: 20px;
+    }
+
+    .map-track-section2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .map-container2, .track-information2 {
+        width: 100%;
+    }
+
+    #myMap2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main-content2 {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
